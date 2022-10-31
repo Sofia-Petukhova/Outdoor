@@ -7,7 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
+    font-weight: 400;
     background-color: #b0aaaa;
     padding: 20px 0;
 }
@@ -36,7 +36,7 @@ body {
     min-width: 270px;
 }
 
-.header-button {
+.header__button {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -48,11 +48,11 @@ body {
     color: #FFFFFF;
 }
 
-.header-button:hover {
+.header__button:hover {
     background: #696553;
 }
 
-.header-button:active {
+.header__button:active {
     background: #4c4a3c;
 }
 
@@ -74,14 +74,14 @@ body {
     min-height: 640px;
     background: url(./images/preview.jpg) no-repeat center;
     background-size: cover;
+    font-weight: 400;
 }
 
-.main__preview-text {
+.main__preview_text {
     width: 495px;
 }
 
-.main__preview-subtitle {
-    font-weight: 400;
+.main__preview_subtitle {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 2px;
@@ -89,18 +89,70 @@ body {
     color: #E6B939;
 }
 
-.main__preview-title {
+.main__preview_title {
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
     font-size: 48px;
     line-height: 58px;
     color: #FFFFFF;
 }
 
-.main__preview-description {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+.main__preview_description {
     font-size: 17px;
     line-height: 25px;
     color: #CACCD1;
+}
+
+.main__about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1168px;
+    max-height: 578px;
+    font-weight: 400;
+}
+
+.main__about-us_text {
+    margin: auto;
+}
+
+.main__about-us_subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #E6B939;
+}
+
+.main__about-us_title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 43px;
+    color: #575445;
+}
+
+.main__about-us_description {
+    font-size: 16px;
+    line-height: 19px;
+    color: #575445;
+}
+
+.main__about-us_link {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: 21px;
+    color: #575445;
+}
+
+.main__about-us_link:hover {
+    text-decoration: underline;
+}
+
+.main__about-us_link:hover > .main__about-us_pointer {
+    margin-left: 8px;
+}
+
+.main__about-us_pointer {
+    margin-left: 4px;
 }
