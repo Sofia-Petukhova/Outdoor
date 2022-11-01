@@ -72,7 +72,7 @@ body {
     align-items: center;
     justify-content: space-around;
     min-height: 640px;
-    background: url(./images/preview.jpg) no-repeat center;
+    background: url(./images/Preview/preview.jpg) no-repeat center;
     background-size: cover;
     font-weight: 400;
 }
@@ -90,6 +90,7 @@ body {
 }
 
 .main__preview_title {
+    margin-bottom: 9px;
     font-family: 'Roboto', sans-serif;
     font-size: 48px;
     line-height: 58px;
@@ -111,8 +112,14 @@ body {
     font-weight: 400;
 }
 
+.main__about-us_image {
+    min-width: 576px;
+    min-height: 576px;
+}
+
 .main__about-us_text {
     margin: auto;
+    width: 384px;
 }
 
 .main__about-us_subtitle {
@@ -124,6 +131,7 @@ body {
 }
 
 .main__about-us_title {
+    margin-bottom: 8px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-size: 36px;
@@ -149,10 +157,91 @@ body {
     text-decoration: underline;
 }
 
-.main__about-us_link:hover > .main__about-us_pointer {
+.main__about-us_link:hover>.main__about-us_pointer {
     margin-left: 8px;
 }
 
 .main__about-us_pointer {
     margin-left: 4px;
 }
+
+.main__our-promise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FAFAFC;
+    padding: 99px 187px 159px 187px;
+}
+
+.main__our-promise_text {
+    text-align: center;
+    width: 538px;
+    margin-bottom: 71px;
+}
+
+.main__our-promise_subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #E6B939;
+}
+
+.main__our-promise_title {
+    margin-bottom: 7px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    line-height: 43px;
+    color: #575445;
+}
+
+.main__our-promise_description {
+    font-size: 16px;
+    line-height: 19px;
+    color: #575445;
+}
+
+.main__our-promise_wrapper-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 102px;
+    grid-row-gap: 110px;
+    max-width: 1066px;
+}
+
+.main__our-promise_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 287px;
+    
+}
+
+.main__our-promise_card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #575445;
+}
+
+.main__our-promise_card-subtitle {
+    margin-bottom: 9px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #575445;
+}
+
+.main__our-promise_card-description {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #575445;
+}
+
