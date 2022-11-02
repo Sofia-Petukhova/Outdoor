@@ -166,6 +166,7 @@ body {
 }
 
 .main__our-promise {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -215,7 +216,7 @@ body {
     flex-direction: column;
     align-items: center;
     max-width: 287px;
-    
+
 }
 
 .main__our-promise_card-icon {
@@ -245,3 +246,151 @@ body {
     color: #575445;
 }
 
+.main__our-promise_decoration-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.main__our-promise_decoration-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.main__product-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 99px 136px 100px 136px;
+}
+
+.main__product-categories_text {
+    text-align: center;
+    width: 538px;
+    margin-bottom: 21px;
+    font-weight: 400;
+}
+
+.main__product-categories_subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #E6B939;
+}
+
+.main__product-categories_title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    color: #575445;
+}
+
+.main__product-categories_description {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #575445;
+}
+
+.main__product-categories_wrapper-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 16px;
+    max-width: 1169px;
+    font-weight: 400;
+    padding-bottom: 21px;
+}
+
+.main__product-categories_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 379px;
+    height: 473px;
+    padding: 39px 65px 0 65px;
+}
+
+.main__product-categories_card_title {
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #575445;
+    padding-bottom: 9px;
+}
+
+.main__product-categories_card_description {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #575445;
+    padding-bottom: 20px;
+}
+
+.main__product-categories_card_link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 21px;
+    color: #575445;
+}
+
+.main__product-categories_card_link:hover {
+    text-decoration: underline;
+}
+
+.main__product-categories_pointer {
+    margin-left: 4px;
+}
+
+.main__product-categories_card_link:hover>.main__product-categories_pointer {
+    margin-left: 8px;
+}
+
+.product-categories_card-1 {
+    background: url(./images/product-categories/Accessories.png)
+}
+
+.product-categories_card-2 {
+    background: url(./images/product-categories/Apparel.png)
+}
+
+.product-categories_card-3 {
+    background: url(./images/product-categories/Climbing-Gear.png)
+}
+
+.product-categories_card-4 {
+    background: url(./images/product-categories/Headwear.png)
+}
+
+.product-categories_card-5 {
+    background: url(./images/product-categories/Hiking-Gear.png)
+}
+
+.product-categories_card-6 {
+    background: url(./images/product-categories/Jackets.png)
+}
+
+.main__product-categories_link {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: 21px;
+    color: #575445;
+}
+
+.main__product-categories_link:hover {
+    text-decoration: underline;
+}
+
+.main__product-categories_pointer {
+    margin-left: 4px;
+}
+
+.main__product-categories_link:hover>.main__product-categories_pointer {
+    margin-left: 8px;
+}
