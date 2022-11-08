@@ -310,7 +310,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 379px;
+    max-width: 379px;
+    width: 30vw;
     height: 473px;
     padding: 39px 65px 0 65px;
     border-radius: 2%;
@@ -439,6 +440,7 @@ body {
     align-items: center;
     background: #375C58;
     min-height: 393px;
+    margin-bottom: 100px;
 }
 
 .main__shop_text {
@@ -483,3 +485,109 @@ body {
     line-height: 22px;
     color: #575445;
 }
+
+.main__read_guides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+}
+
+.main__guides_subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #E6B939;
+}
+
+.main__guides_title {
+    font-size: 36px;
+    line-height: 43px;
+    color: #575445;
+    margin-bottom: 7px;
+}
+
+.main__guides_description {
+    font-size: 16px;
+    line-height: 19px;
+    color: #575445;
+    max-width: 45%;
+    margin-bottom: 21px;
+}
+
+.main__guides_wrapper-guide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+    max-width: 1168px;
+    font-weight: 400;
+    padding-bottom: 26px;
+}
+
+.main__guide_image {
+    margin-bottom: 18px;
+}
+
+.main__guide_subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    color: #575445;
+    margin-bottom: 12px;
+}
+
+.main__guide_author {
+    display: flex;
+}
+
+.main__guide_author_image {
+    margin-right: 12px;
+}
+
+.main__guide_author-signature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main__guide_author-name {
+    font-size: 13px;
+    line-height: 18px;
+    color: #575445;
+}
+
+.main__guide_author-profession {
+    font-size: 11px;
+    line-height: 15px;
+    color: #E6B939;
+}
+
+.main__guide_date {
+    margin-left: auto;
+    align-self: center;
+    font-size: 13px;
+    line-height: 18px;
+    color: #6F7278;
+}
+
+.main__guides_link {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 21px;
+    color: #575445;
+    margin-bottom: 200px;
+}
+
+.main__guides_pointer {
+    margin-left: 4px;
+}
+
+.main__guides_link:hover {
+    text-decoration: underline;
+}
+
+.main__guides_link:hover>.main__guides_pointer {
+    margin-left: 8px;
+}
+
