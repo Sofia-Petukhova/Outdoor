@@ -106,20 +106,22 @@ body {
 .main__about-us {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
+    margin: 100px auto;
     max-width: 1168px;
     max-height: 578px;
     font-weight: 400;
 }
 
 .main__about-us_image {
-    min-width: 576px;
-    min-height: 576px;
+    margin-left: auto;
 }
 
 .main__about-us_text {
-    margin: auto;
-    width: 384px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 450px;
+    padding-left: 104px;
 }
 
 .main__about-us_subtitle {
@@ -591,3 +593,60 @@ body {
     margin-left: 8px;
 }
 
+.main__read_magazine {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+}
+
+.main__magazine_image {
+    margin-left: auto;
+}
+
+.main__magazine_text {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-left: 104px;
+    width: 450px;
+    font-weight: 400;
+}
+
+.main__magazine_subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #E6B939;
+}
+
+.main__magazine_title {
+    font-size: 36px;
+    line-height: 43px;
+    color: #575445;
+    margin-bottom: 7px;
+}
+
+.main__magazine_description {
+    font-size: 16px;
+    line-height: 19px;
+    color: #575445;
+    margin-bottom: 20px;
+}
+
+.main__magazine_link {
+    display: flex;
+    align-items: center;
+}
+
+.main__magazine_pointer {
+    padding-left: 4px;
+}
+
+.main__magazine_link:hover {
+    text-decoration: underline;
+}
+
+.main__magazine_link:hover>.main__magazine_pointer {
+    padding-left: 8px;
+}
