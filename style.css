@@ -4,6 +4,8 @@ body {
 }
 
 .header {
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -45,15 +47,13 @@ body {
     left: 0;
     width: 50%;
     height: 540px;
-    padding: 15px;
+    padding: 75px 15px 15px;
     background: #9a9595;
     transform: translateX(+200%);
-    transition: transform 0.5s;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding-top: 75px;
 }
 
 .header__burger_menu.active {
@@ -151,6 +151,7 @@ body {
     background: url(./images/Preview/preview.jpg) no-repeat center;
     background-size: cover;
     font-weight: 400;
+    padding: 50px;
 }
 
 .main__preview_wrapper {
@@ -186,22 +187,33 @@ body {
 .main__about-us {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 100px auto;
+    gap: 40px;
+    margin: 50px auto;
     max-width: 1168px;
     max-height: 578px;
     font-weight: 400;
 }
 
+.main__about-us_image-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
 .main__about-us_image {
-    margin-left: auto;
+    width: 80%;
+}
+
+.main__about-us_text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 
 .main__about-us_text {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 450px;
-    padding-left: 104px;
+    width: 70%;
 }
 
 .main__about-us_subtitle {
@@ -254,17 +266,23 @@ body {
     flex-direction: column;
     align-items: center;
     background: #FAFAFC;
-    padding: 99px 187px 159px 187px;
+    padding: 50px 100px;
     z-index: -1;
 }
 
+.main__our-promise_text-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
 .main__our-promise_text {
-    text-align: center;
-    width: 538px;
-    margin-bottom: 71px;
+    width: 60%;
 }
 
 .main__our-promise_subtitle {
+    text-align: center;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 2px;
@@ -273,6 +291,7 @@ body {
 }
 
 .main__our-promise_title {
+    text-align: center;
     margin-bottom: 7px;
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
@@ -281,6 +300,7 @@ body {
 }
 
 .main__our-promise_description {
+    text-align: center;
     font-size: 16px;
     line-height: 19px;
     color: #575445;
@@ -288,8 +308,8 @@ body {
 
 .main__our-promise_wrapper-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 102px;
     grid-row-gap: 110px;
     max-width: 1066px;
@@ -346,14 +366,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 99px 136px 100px 136px;
+    padding: 50px 100px;
+}
+
+.main__product-categories_text-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-weight: 400;
 }
 
 .main__product-categories_text {
-    text-align: center;
-    width: 538px;
-    margin-bottom: 21px;
-    font-weight: 400;
+    width: 60%;
 }
 
 .main__product-categories_subtitle {
@@ -383,45 +407,47 @@ body {
 
 .main__product-categories_wrapper-card {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 16px;
-    max-width: 1169px;
+    grid-template-columns: repeat(3, 379px);
+    grid-template-rows: repeat(2, 473px);
+    grid-gap: 30px;
     font-weight: 400;
-    padding-bottom: 21px;
+    margin-bottom: 30px;
 }
 
 .main__product-categories_card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 379px;
-    width: 30vw;
-    height: 473px;
-    padding: 39px 65px 0 65px;
     border-radius: 2%;
     transition: background-size 2s;
 }
 
 .main__product-categories_card:hover {
-    background-size: 110%;
+    background-size: 120%;
+}
 
+.main__product-categories_card_text {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .main__product-categories_card_title {
     font-size: 28px;
     line-height: 34px;
-    text-align: center;
-    color: #575445;
     padding-bottom: 9px;
+    color: #575445;
 }
 
 .main__product-categories_card_description {
     font-size: 16px;
     line-height: 22px;
-    text-align: center;
-    color: #575445;
     padding-bottom: 20px;
+    color: #575445;
 }
 
 .main__product-categories_card_link {
@@ -447,8 +473,6 @@ body {
 .product-categories_card-1 {
     background: url(./images/product-categories/Accessories.png);
     background-size: 100%;
-
-
 }
 
 .product-categories_card-2 {
@@ -501,7 +525,7 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     padding: 0 40px 40px 0;
-    min-height: 600px;
+    min-height: 550px;
     background-image: url(./images/Beautiful-picture/beautiful-picture.png);
     background-size: cover;
 }
@@ -547,8 +571,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 393px;
-    margin-bottom: 100px;
+    min-height: 550px;
     background: url(./images/main-shop/main-shop-decoration.svg);
 }
 
@@ -595,11 +618,13 @@ body {
     color: #575445;
 }
 
+
 .main__read_guides {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: 400;
+    padding-top: 50px;
 }
 
 .main__guides_subtitle {
@@ -628,7 +653,7 @@ body {
 .main__guides_wrapper-guide {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 32px;
+    grid-gap: 35px;
     max-width: 1168px;
     font-weight: 400;
     padding-bottom: 26px;
@@ -685,7 +710,7 @@ body {
     font-size: 15px;
     line-height: 21px;
     color: #575445;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 }
 
 .main__guides_pointer {
@@ -703,20 +728,33 @@ body {
 .main__read_magazine {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 100px;
+    gap: 40px;
+    margin: 50px auto;
+    max-width: 1168px;
+    max-height: 578px;
+    font-weight: 400;
+}
+
+.main__magazine_image-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
 }
 
 .main__magazine_image {
-    margin-left: auto;
+    width: 80%;
+}
+
+.main__magazine_text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 
 .main__magazine_text {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    padding-left: 104px;
-    width: 450px;
-    font-weight: 400;
+    width: 70%;
 }
 
 .main__magazine_subtitle {
@@ -744,6 +782,7 @@ body {
 .main__magazine_link {
     display: flex;
     align-items: center;
+    color: #575445;
 }
 
 .main__magazine_pointer {
@@ -760,7 +799,7 @@ body {
 
 .footer {
     background: #575445;
-    padding: 100px 136px;
+    padding: 70px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -769,7 +808,7 @@ body {
 }
 
 .footer-logo {
-    padding-bottom: 75px;
+    padding-bottom: 50px;
 }
 
 .footer__wrapper {
@@ -850,7 +889,7 @@ body {
     min-width: 156px;
 }
 
-@media screen and (width: 820px) and (height: 1180px) {
+@media screen and (min-width: 820px) and (max-width: 1024px) {
 
     .header {
         padding: 20px;
@@ -878,22 +917,12 @@ body {
         width: 720px;
     }
 
-    .main__about-us {
-        max-width: 720px;
-        margin: 50px;
-    }
-
-    .main__about-us_text {
-        width: 350px;
-        padding-left: 40px;
-    }
-
     .main__about-us_description {
         margin-bottom: 9px;
     }
 
-    .main__our-promise {
-        padding: 50px;
+    .main__our-promise_text {
+        width: 80%;
     }
 
     .main__our-promise_wrapper-cards {
@@ -901,57 +930,30 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 
-    .main__product-categories {
-        padding: 50px;
-    }
-
     .main__product-categories_text {
-        padding-bottom: 30px;
+        width: 80%;
     }
 
     .main__product-categories_wrapper-card {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 60px;
-        padding: 0 0 30px;
+        grid-template-columns: repeat(2, 349px);
+        grid-template-rows: repeat(3, 435px);
     }
 
-    .main__product-categories_card {
-        width: 300px;
-        max-height: 370px;
-        padding: 25px 35px 0 35px;
-    }
-
-    .main__product-categories_card_title {
-        padding-bottom: 9px;
-    }
-
-    .main__product-categories_card_description {
-        padding-bottom: 9px;
+    .main__product-categories_card_text {
+        height: 45%;
     }
 
     .main__beautiful-picture {
         min-height: 460px;
         justify-content: center;
         padding-right: 0;
-        padding-bottom: 20px;
-    }
-
-    .main__shop {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 460px;
+        padding-bottom: 30px;
     }
 
     .main__shop_wrapper {
         min-height: 460px;
-        min-width: 820px;
-        margin: 0;
     }
 
-    .main__read {
-        padding-top: 50px;
-    }
 
     .main__read_guides {
         justify-content: center;
@@ -978,17 +980,6 @@ body {
         padding-bottom: 26px;
     }
 
-    .main__read_magazine {
-        max-width: 730px;
-        margin: 50px;
-    }
-
-    .main__magazine_text {
-        width: 350px;
-        padding-left: 40px;
-        margin-bottom: 30px;
-    }
-
     .main__guides_guide:first-child {
         margin-bottom: 30px;
     }
@@ -1006,7 +997,6 @@ body {
     .footer-logo {
         padding-bottom: 0;
     }
-
 
     .footer__wrapper {
         display: grid;
@@ -1053,5 +1043,966 @@ body {
 
     .footer__media {
         min-width: 150px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 819.98px) {
+
+    .header {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .header__burger_menu {
+        height: 100%;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__wrapper-button {
+        display: none;
+    }
+
+    .main__preview {
+        min-height: 450px;
+        padding: 0 30px;
+        justify-content: start;
+    }
+
+    .main__preview_text {
+        width: 320px;
+    }
+
+    .main__about-us {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 819px;
+        max-height: 900px;
+        font-weight: 400;
+        margin: 0;
+        padding: 30px;
+    }
+
+    .main__about-us_image-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__about-us_image {
+        width: 80%;
+    }
+
+    .main__about-us_text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main__about-us_text {
+        width: 90%;
+    }
+
+    .main__about-us_link {
+        justify-content: center;
+    }
+
+    .main__about-us_description {
+        margin-bottom: 10px;
+    }
+
+    .main__our-promise {
+        padding: 40px;
+    }
+
+    .main__our-promise_text-wrapper {
+        margin-bottom: 40px;
+    }
+
+    .main__our-promise_text {
+        width: 95%;
+    }
+
+    .main__our-promise_wrapper-cards {
+        max-width: 819px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+    .main__our-promise_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 287px;
+
+    }
+
+    .main__product-categories {
+        padding: 30px;
+    }
+
+    .main__product-categories_text-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .main__product-categories_text {
+        width: 90%;
+    }
+
+    .main__product-categories_card_title {
+        padding-bottom: 5px;
+    }
+
+    .main__product-categories_card_description {
+        padding-bottom: 10px;
+    }
+
+
+    .main__our-promise_decoration-right {
+        width: 350px;
+    }
+
+    .main__our-promise_decoration-left {
+        width: 350px;
+    }
+
+    .main__product-categories_text {
+        width: 80%;
+    }
+
+    .main__product-categories_wrapper-card {
+        grid-template-columns: repeat(2, 260px);
+        grid-template-rows: repeat(3, 320px);
+    }
+
+    .main__product-categories_card_text {
+        height: 50%;
+    }
+
+    .main__beautiful-picture {
+        min-height: 400px;
+        justify-content: center;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+
+    .main__shop_wrapper {
+        min-height: 400px;
+    }
+
+    .main__read_guides {
+        justify-content: center;
+    }
+
+    .main__guides_text {
+        text-align: center;
+        width: 450px;
+        margin-bottom: 30px;
+    }
+
+    .main__guides_description {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .main__guides_wrapper-guide {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 32px;
+        max-width: 819px;
+        font-weight: 400;
+        padding: 0 30px 26px;
+    }
+
+    .main__guides_guide:first-child {
+        margin-bottom: 30px;
+    }
+
+    .main__guides_link {
+        margin-bottom: 30px;
+    }
+
+    .main__read_magazine {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 819px;
+        max-height: 900px;
+        font-weight: 400;
+        margin: 0;
+        padding: 50px;
+    }
+
+    .main__magazine_image-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__magazine_image {
+        width: 80%;
+    }
+
+    .main__magazine_text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main__magazine_text {
+        width: 90%;
+    }
+
+    .main__magazine_link {
+        justify-content: center;
+    }
+
+    .main__magazine_description {
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        min-width: 600px;
+        padding: 30px;
+        justify-content: center;
+    }
+
+    .footer-logo {
+        padding-bottom: 0;
+    }
+
+    .footer__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 20px;
+        min-width: 500px;
+        padding: 30px 0;
+
+    }
+
+    .footer__list {
+        display: grid;
+        min-width: 100px;
+    }
+
+    .footer__title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer__wrapper-item {
+        text-align: center;
+    }
+
+    .footer__subscription {
+        display: grid;
+        grid-column: 1 / -1;
+    }
+
+    .footer__subscription_wrapper {
+        width: 100%;
+    }
+
+    .footer__description {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer__subscription_email {
+        width: 250px;
+    }
+
+    .footer__social {
+        display: flex;
+        min-width: 550px;
+    }
+
+    .footer__license {
+        max-width: 300px;
+    }
+
+    .footer__media {
+        min-width: 130px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 599.98px) {
+
+    .header {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .header__burger_wrapper-button {
+        flex-direction: column;
+        min-height: 100px;
+    }
+
+    .header__burger_button {
+        width: 140px;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__wrapper-button {
+        display: none;
+    }
+
+    .main__preview {
+        min-height: 500px;
+        padding: 0 30px;
+        justify-content: start;
+    }
+
+    .main__preview_text {
+        width: 300px;
+    }
+
+    .main__preview_subtitle {
+        width: 200px;
+    }
+
+    .main__preview_title {
+        font-size: 35px;
+        width: 240px;
+    }
+
+    .main__about-us {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 614px;
+        max-height: 900px;
+        font-weight: 400;
+        margin: 0;
+        padding: 30px;
+    }
+
+    .main__about-us_image-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__about-us_image {
+        width: 80%;
+    }
+
+    .main__about-us_text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main__about-us_text {
+        width: 90%;
+    }
+
+    .main__about-us_link {
+        justify-content: center;
+    }
+
+    .main__about-us_description {
+        margin-bottom: 10px;
+    }
+
+    .main__our-promise {
+        padding: 40px;
+    }
+
+    .main__our-promise_text-wrapper {
+        margin-bottom: 40px;
+    }
+
+    .main__our-promise_text {
+        width: 95%;
+    }
+
+    .main__our-promise_wrapper-cards {
+        max-width: 614px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap: 30px;
+    }
+
+    .main__our-promise_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 287px;
+
+    }
+
+    .main__product-categories {
+        padding: 30px;
+    }
+
+    .main__product-categories_text-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .main__product-categories_text {
+        width: 100%;
+    }
+
+    .main__product-categories_card_title {
+        padding-bottom: 5px;
+    }
+
+    .main__product-categories_card_description {
+        padding-bottom: 10px;
+    }
+
+
+    .main__our-promise_decoration-right {
+        width: 350px;
+    }
+
+    .main__our-promise_decoration-left {
+        width: 350px;
+    }
+
+    .main__product-categories_text {
+        width: 80%;
+    }
+
+    .main__product-categories_wrapper-card {
+        grid-template-columns: repeat(1, 260px);
+        grid-template-rows: repeat(6, 320px);
+        grid-gap: 30px;
+    }
+
+    .main__product-categories_card_text {
+        height: 50%;
+    }
+
+    .main__beautiful-picture {
+        min-height: 400px;
+        justify-content: start;
+        align-items: end;
+        padding: 20px;
+    }
+
+    .main__beautiful-picture__wrapper {
+        flex-direction: column;
+        padding: 10px 15px;
+        width: 170px;
+    }
+
+
+    .main__beautiful-picture_wrapper-link {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 12px;
+    }
+
+    .main__beautiful-picture_wrapper-link:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+
+    .main__shop_wrapper {
+        min-height: 400px;
+        padding: 0 30px;
+    }
+
+    .main__read_guides {
+        justify-content: center;
+        padding-top: 40px;
+    }
+
+    .main__guides_text {
+        text-align: center;
+        max-width: 450px;
+        margin-bottom: 30px;
+    }
+
+    .main__guides_description {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .main__guides_wrapper-guide {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 35px;
+        max-width: 614px;
+        font-weight: 400;
+        padding: 0 30px 30px;
+    }
+
+    .main__guides_link {
+        margin-bottom: 30px;
+    }
+
+    .main__read_magazine {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 614px;
+        max-height: 900px;
+        font-weight: 400;
+        margin: 0;
+        padding: 30px;
+    }
+
+    .main__magazine_image-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__magazine_image {
+        width: 80%;
+    }
+
+    .main__magazine_text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main__magazine_text {
+        width: 100%;
+    }
+
+    .main__magazine_link {
+        justify-content: center;
+    }
+
+    .main__magazine_description {
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        min-width: 400px;
+        padding: 30px;
+        justify-content: center;
+    }
+
+    .footer-logo {
+        padding-bottom: 0;
+    }
+
+    .footer__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 20px;
+        min-width: 350px;
+        padding: 30px 0;
+
+    }
+
+    .footer__list {
+        display: grid;
+        min-width: 100px;
+    }
+
+    .footer__title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer__wrapper-item {
+        text-align: center;
+    }
+
+    .footer__subscription {
+        display: grid;
+        grid-column: 1 / -1;
+    }
+
+    .footer__subscription_wrapper {
+        width: 100%;
+    }
+
+    .footer__description {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer__subscription_email {
+        width: 250px;
+    }
+
+    .footer__social {
+        display: flex;
+        min-width: 350px;
+        width: 100%;
+    }
+
+    .footer__license {
+        max-width: 300px;
+    }
+
+    .footer__media {
+        min-width: 130px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 399.98px) {
+
+    .header {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .header__burger_wrapper-button {
+        flex-direction: column;
+        min-height: 100px;
+    }
+
+    .header__burger_button {
+        width: 140px;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__wrapper-button {
+        display: none;
+    }
+
+    .main__preview {
+        min-height: 500px;
+        padding: 0 30px;
+        justify-content: start;
+    }
+
+    .main__preview_text {
+        width: 250px;
+    }
+
+    .main__preview_subtitle {
+        width: 200px;
+    }
+
+    .main__preview_title {
+        font-size: 35px;
+        width: 220px;
+    }
+
+    .main__about-us {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 614px;
+        max-height: 900px;
+        font-weight: 400;
+        margin: 0;
+        padding: 30px;
+    }
+
+    .main__about-us_image-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__about-us_image {
+        width: 80%;
+    }
+
+    .main__about-us_text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main__about-us_text {
+        width: 90%;
+    }
+
+    .main__about-us_link {
+        justify-content: center;
+    }
+
+    .main__about-us_description {
+        margin-bottom: 10px;
+    }
+
+    .main__our-promise {
+        padding: 40px;
+    }
+
+    .main__our-promise_text-wrapper {
+        margin-bottom: 40px;
+    }
+
+    .main__our-promise_text {
+        width: 95%;
+    }
+
+    .main__our-promise_wrapper-cards {
+        max-width: 614px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap: 30px;
+    }
+
+    .main__our-promise_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 287px;
+
+    }
+
+    .main__product-categories {
+        padding: 30px;
+    }
+
+    .main__product-categories_text-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .main__product-categories_text {
+        width: 100%;
+    }
+
+    .main__product-categories_card_title {
+        padding-bottom: 5px;
+    }
+
+    .main__product-categories_card_description {
+        padding-bottom: 10px;
+    }
+
+
+    .main__our-promise_decoration-right {
+        width: 350px;
+    }
+
+    .main__our-promise_decoration-left {
+        width: 350px;
+    }
+
+    .main__product-categories_text {
+        width: 80%;
+    }
+
+    .main__product-categories_wrapper-card {
+        grid-template-columns: repeat(1, 260px);
+        grid-template-rows: repeat(6, 320px);
+        grid-gap: 30px;
+    }
+
+    .main__product-categories_card_text {
+        height: 50%;
+    }
+
+    .main__beautiful-picture {
+        min-height: 400px;
+        justify-content: start;
+        align-items: end;
+        padding: 20px;
+    }
+
+    .main__beautiful-picture__wrapper {
+        flex-direction: column;
+        padding: 10px 15px;
+        width: 150px;
+    }
+
+
+    .main__beautiful-picture_wrapper-link {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 12px;
+    }
+
+    .main__beautiful-picture_wrapper-link:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+
+    .main__shop_wrapper {
+        min-height: 400px;
+        padding: 0 30px;
+    }
+
+    .main__read_guides {
+        justify-content: center;
+        padding-top: 40px;
+    }
+
+    .main__guides_text {
+        text-align: center;
+        max-width: 450px;
+        margin-bottom: 30px;
+        padding: 0 30px;
+    }
+
+    .main__guides_description {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .main__guides_wrapper-guide {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 35px;
+        max-width: 614px;
+        font-weight: 400;
+        padding: 0 30px 30px;
+    }
+
+    .main__guides_link {
+        margin-bottom: 30px;
+    }
+
+    .main__read_magazine {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 614px;
+        max-height: 900px;
+        font-weight: 400;
+        margin: 0;
+        padding: 30px;
+    }
+
+    .main__magazine_image-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__magazine_image {
+        width: 80%;
+    }
+
+    .main__magazine_text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main__magazine_text {
+        width: 100%;
+    }
+
+    .main__magazine_link {
+        justify-content: center;
+    }
+
+    .main__magazine_description {
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        min-width: 320px;
+        padding: 15px 10px;
+        justify-content: center;
+    }
+
+    .footer-logo {
+        padding-bottom: 0;
+    }
+
+    .footer__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 20px;
+        min-width: 300px;
+        padding: 15px 0;
+
+    }
+
+    .footer__list {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+    }
+
+    .footer__title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer__wrapper-item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 5px;
+        text-align: center;
+    }
+
+    .footer__subscription {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__description {
+        max-width: 290px;
+        margin-bottom: 5px;
+    }
+
+    .footer__subscription_wrapper {
+        width: 290px;
+        height: 53px;
+        padding: 0 7px 0 21px;
+    }
+
+    .footer__subscription_email {
+        width: 195px;
+    }
+
+    .footer__social {
+        flex-direction: column;
+        min-width: 290px;
+        width: 290px;
+    }
+
+    .footer__license {
+        margin-bottom: 10px;
+    }
+
+    .footer__media {
+        display: flex;
+        justify-content: space-between;
+        min-width: 100px;
+        width: 130px;
     }
 }
