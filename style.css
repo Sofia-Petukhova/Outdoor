@@ -1677,6 +1677,10 @@ body {
         display: block;
     }
 
+    .header__burger_link {
+        text-align: center;
+    }
+
     .header__burger_wrapper-button {
         flex-direction: column;
         min-height: 100px;
